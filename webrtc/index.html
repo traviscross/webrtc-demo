@@ -1,0 +1,19 @@
+<script>
+var re = /Chrome\/(\d+)/i;
+var foo;
+
+
+if ((foo = re.exec(navigator.userAgent)) && foo[1] >= 26) {
+   document.location = "https://webrtc.freeswitch.org/webrtc/portal.html";
+} else {
+  re = /FireFox\/(\d+)/i;
+  if ((foo = re.exec(navigator.userAgent)) && foo[1] >= 22) {
+   document.location = "https://webrtc.freeswitch.org/sipml5";
+  } else {
+     document.location = "https://webrtc.freeswitch.org/webrtc/chrome.html";
+  } 
+} 
+ 
+
+</script>
+
